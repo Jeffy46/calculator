@@ -32,7 +32,6 @@ body{
 }
 .button{
     flex:1 1 23%;
-    background-color: black;
     font-size: 70px;
     display: flex;
     justify-content: center;
