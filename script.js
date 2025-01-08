@@ -10,9 +10,10 @@ let load = () => {
     }
     //appends numbers to user display when clicked
     let temp2 = document.querySelectorAll("#num");
-        for(let i = 0; i < temp2.length-1; i++){
+        for(let i = 0; i < temp2.length; i++){
         console.log(temp2[i]);
         temp2[i].addEventListener('click', ()=>{
+            console.log(temp2[i]);
             display.append(temp2[i].textContent);
         })
     }
