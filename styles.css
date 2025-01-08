@@ -22,6 +22,10 @@ body{
     background-color: antiquewhite;
     width: 100%;
     height:20%;
+    font-size:80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
 }
 
 .bottom-buttons{
