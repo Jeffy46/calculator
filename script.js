@@ -40,14 +40,68 @@ let load = () => {
             }
         })
     }
-    
+
     //divide by hundred
     let temp6 = document.querySelector("#divByHundred");
     temp6.addEventListener('click', ()=>{
-        num = parseFloat(parseFloat(num/100).toFixed(100));
+        num = parseFloat(parseFloat(num/100).toFixed(10));
         refresh();
     })
 
+    let temp7 = document.querySelector("#divide");
+    temp7.addEventListener('click',()=>{
+        operation = "/";
+        altNum = num;
+        num = "";
+        refresh();
+
+    })
+    let temp8 = document.querySelector("#multiply");
+    temp8.addEventListener('click',()=>{
+        operation = "*";
+        altNum = num;
+        num = "";
+        refresh();
+
+    })
+    let temp9 = document.querySelector("#subtract");
+    temp9.addEventListener('click',()=>{
+        operation = "-";
+        altNum = num;
+        num = "";
+        refresh();
+
+    })
+    let temp10 = document.querySelector("#add");
+    temp10.addEventListener('click',()=>{
+        operation = "+";
+        altNum = num;
+        num = "";
+        refresh();
+    })
+
+    //computes value
+    let temp11 = document.querySelector("#equal");
+    temp11.addEventListener('click',()=>{
+        num = parseInt(num);
+        altNum = parseInt(altNum);
+        if(operation === "/"){
+            num=altNum/num;
+        }
+        if(operation === "*"){
+            num=altNum*num;
+        }
+        if(operation === "-"){
+            num=altNum-num;
+        }
+        if(operation === "+"){
+            num=altNum+num;
+        }
+        console.log(num);
+        altNum=0;
+        refresh();
+    })
 let refresh = () =>{
     display.innerHTML=num;
+    console.log(num)
 }
